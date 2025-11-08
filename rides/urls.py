@@ -12,3 +12,4 @@ router.register(r'reviews', ReviewViewSet)
 urlpatterns = [
     path('', include(router.urls)),
 ]
+
