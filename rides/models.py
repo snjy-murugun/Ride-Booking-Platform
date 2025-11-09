@@ -44,7 +44,7 @@ class Ride(models.Model):
         ('started', 'Started'),
         ('completed', 'Completed'),
         ('cancelled', 'Cancelled'),    
-        ('reviewd', 'Reviewed'),
+        ('reviewed', 'Reviewed'),
     ]
     
     status = models.CharField(max_length=20, choices = STATUS_CHOICES, default='requested')   
@@ -146,3 +146,33 @@ class Review(models.Model):
 
     def __str__(self):                                              
         return f"Review for Ride {self.ride.id} - {self.rating} Stars"
+
+# helper function 
+
+from datetime import datetime, time
+
+def calculate_estimated_fare(vehicle_type, distance_km, waiting_time=0):
+    
+    
+    base_fare = 50
+    waiting_charge_per_min = 5
+
+    per_km_rates = {
+        'car': 15,
+        'auto': 12,
+        'bike': 10
+    }
+    per_km_rate = per_km_rates.get(vehicle_type, 10)
+
+    # base fare
+    total_fare = base_fare + (distance_km * per_km_rate) + (waiting_time * waiting_charge_per_min)
+
+    #peak hour
+    current_time = datetime.now().time()
+    peak_hours = [(time(8, 0), time(10, 0)), (time(17, 0), time(20, 0))]  # 8–10 AM, 5–8 PM
+    for start, end in peak_hours:
+        if start <= current_time <= end:
+            total_fare *= 1.5  # 50% increase during peak
+            break
+
+    return round(total_fare, 2)

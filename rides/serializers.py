@@ -7,9 +7,11 @@ class VehicleSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class RideSerializer(serializers.ModelSerializer):
+    ride_status = serializers.CharField(source='ride.status', read_only=True)
     class Meta:
         model = Ride
         fields = '__all__'
+        extra_fields = ['rider_status']
 
 class TripLogSerializer(serializers.ModelSerializer):
     class Meta:

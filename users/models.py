@@ -13,6 +13,6 @@ class user(AbstractUser):
     
     is_available = models.BooleanField(default=False)
     
-    def __str__self():
+    def __str__(self):
         return f"{self.username} ({self.role})"
     
