@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ride Booking Platform | Move Different</title>
+  <link rel="stylesheet" href="{% static 'frontend/css/main.css' %}">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar glass">
+    <div class="logo">Ride<span>Booking</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Rides</a>
+      <a href="#">Drivers</a>
+      <a href="#">Support</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Move <span>Different.</span></h1>
+      <p>Where speed meets simplicity. Ride smarter, faster, and better — powered by innovation.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn black">Book a Ride</a>
+        <a href="#" class="btn white">Drive with Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+    <h2>Why Choose <span>RideBooking?</span></h2>
+    <div class="why-container">
+      <div class="why-card">
+        <h3>🚀 Speed</h3>
+        <p>Instant matches, lightning-fast booking, and real-time tracking.</p>
+      </div>
+      <div class="why-card">
+        <h3>🧠 Intelligence</h3>
+        <p>Smart algorithms that learn your habits and suggest better routes.</p>
+      </div>
+      <div class="why-card">
+        <h3>💳 Flexibility</h3>
+        <p>Multiple payment modes, transparent fares, and cashless convenience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <h3>⚡ Instant Booking</h3>
+      <p>Book and go in seconds. Because time is your luxury.</p>
+    </div>
+    <div class="feature">
+      <h3>🚗 Smart Matching</h3>
+      <p>AI-powered pairing between drivers and riders for ultimate efficiency.</p>
+    </div>
+    <div class="feature">
+      <h3>🛰️ Live Tracking</h3>
+      <p>Know your route in real time. Transparent. Accurate. Seamless.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>What Our Riders Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <p>“The experience is seamless and futuristic. It truly makes me feel like I’m living in 2030!”</p>
+        <h4>- Alex, Tech Enthusiast 🚀</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>“Move Different isn’t just a tagline. It’s real. Fast, clean, and reliable.”</p>
+        <h4>- Priya, Designer ✨</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>“The interface, the smoothness, everything screams premium.”</p>
+        <h4>- Arjun, Entrepreneur 💼</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Join our waitlist and be part of the movement.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Join</button>
+    </form>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Join the Revolution</h2>
+    <p>Move Different. Move Smarter. Move with RideBooking.</p>
+    <a href="#" class="btn gradient">Get Started</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer glass">
+    <p>© {% now "Y" %} RideBooking — Built to Move Different 🚀</p>
+  </footer>
+</body>
+</html>
