@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rider Dashboard | Move Different</title>
+  <link rel="stylesheet" href="{% static 'frontend/css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'frontend/css/dashboard.css' %}">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar glass">
+    <div class="logo">Ride<span>Booking</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD HEADER -->
+  <header class="dashboard-header">
+    <h1>Welcome, Rider 👋</h1>
+    <p>Plan your next ride with ease — book below and move different.</p>
+  </header>
+
+  <!-- BOOKING FORM -->
+  <section class="booking-section">
+    <div class="booking-card">
+      <h2>Book a Ride</h2>
+      <form>
+        <label for="pickup">Pickup Location</label>
+        <input type="text" id="pickup" placeholder="Enter your pickup point" required>
+
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" placeholder="Enter your destination" required>
+
+        <label for="ride-type">Ride Type</label>
+        <select id="ride-type">
+          <option value="bike">Bike</option>
+          <option value="auto">Auto</option>
+          <option value="car">Car</option>
+        </select>
+
+        <button type="submit" class="btn gradient">Find Ride</button>
+      </form>
+    </div>
+
+    <!-- UPCOMING RIDE CARD -->
+    <div class="ride-info">
+      <h2>Your Current Ride</h2>
+      <div class="ride-card">
+        <p>No active rides right now.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer glass">
+    <p>© {% now "Y" %} RideBooking — Move Different 🚀</p>
+  </footer>
+</body>
+</html>

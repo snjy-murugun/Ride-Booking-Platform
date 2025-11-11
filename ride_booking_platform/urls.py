@@ -23,6 +23,11 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path('', frontend_views.home, name='home'),
+    path('rider/dashboard/', frontend_views.rider_dashboard, name='rider_dashboard'),
+    path('driver/dashboard/', frontend_views.driver_dashboard, name='driver_dashboard'),
+    path('admin/panel/', frontend_views.admin_panel, name='admin_panel'),
+    path('login/', frontend_views.login_page, name='login'),
+    path('signup/', frontend_views.signup_page, name='signup'),
     path('admin/', admin.site.urls),
     path('api/', include('rides.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

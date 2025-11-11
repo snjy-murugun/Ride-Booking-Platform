@@ -1,0 +1,139 @@
+/* ==== AUTH UI (Refined to match Admin/Home UI theme) ==== */
+
+body {
+  background: linear-gradient(180deg, #ffffff, #f3f3f3);
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+/* AUTH CONTAINER */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 2rem;
+}
+
+/* AUTH CARD */
+.auth-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 3rem 3.5rem;
+  width: 400px;
+  text-align: center;
+  border-top: 5px solid #00bfff;
+  transition: all 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 191, 255, 0.15);
+}
+
+.auth-card h1 {
+  color: #00bfff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card .subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* FORM */
+.form-group {
+  text-align: left;
+  margin-bottom: 1.4rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+}
+
+/* BUTTON */
+.btn.gradient {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.9rem 0;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #00bfff, #0077ff);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6);
+}
+
+/* SWITCH LINK */
+.switch {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.switch a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: #111;}
+
+.navbar {
+  background-color: #000000;
+}
+
+.navbar a {
+  color: #ffffff;
+}
+
+    
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .auth-card {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .auth-card h1 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard | Move Different</title>
+  <link rel="stylesheet" href="{% static 'frontend/css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'frontend/css/driver.css' %}">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar glass">
+    <div class="logo">Ride<span>Booking</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#" class="active">Driver Dashboard</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="driver-header">
+    <div class="header-content">
+      <h1>Drive Different.</h1>
+      <p>Your rides. Your time. Your control. Stay online and make every trip smarter.</p>
+      
+      <!-- Glowing Toggle Button -->
+      <button id="statusBtn" class="status-toggle online">
+        <span class="status-indicator"></span>
+        <span class="status-text">🟢 Online</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- DASHBOARD -->
+  <section class="driver-dashboard">
+    <!-- Available Rides -->
+    <div class="rides-container">
+      <h2>Available Rides</h2>
+      <div class="ride-list">
+
+        <div class="ride-card">
+          <div class="ride-details">
+            <p><strong>Pickup:</strong> Central Park</p>
+            <p><strong>Destination:</strong> Times Square</p>
+          </div>
+          <button class="btn outline">Accept Ride</button>
+        </div>
+
+        <div class="ride-card">
+          <div class="ride-details">
+            <p><strong>Pickup:</strong> Airport</p>
+            <p><strong>Destination:</strong> City Mall</p>
+          </div>
+          <button class="btn outline">Accept Ride</button>
+        </div>
+
+        <div class="ride-card">
+          <div class="ride-details">
+            <p><strong>Pickup:</strong> Riverside</p>
+            <p><strong>Destination:</strong> Downtown</p>
+          </div>
+          <button class="btn outline">Accept Ride</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Driver Stats -->
+    <div class="stats-card">
+      <h2>Your Summary</h2>
+      <div class="stats">
+        <div>
+          <h3>12</h3>
+          <p>Rides Completed</p>
+        </div>
+        <div>
+          <h3>4.9★</h3>
+          <p>Driver Rating</p>
+        </div>
+        <div>
+          <h3>₹2,450</h3>
+          <p>Total Earnings</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer glass">
+    <p>© {% now "Y" %} RideBooking — Drive Smart, Move Different 🚀</p>
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    const statusBtn = document.getElementById("statusBtn");
+    const statusText = document.querySelector(".status-text");
+    const indicator = document.querySelector(".status-indicator");
+
+    statusBtn.addEventListener("click", () => {
+      if (statusBtn.classList.contains("online")) {
+        statusBtn.classList.remove("online");
+        statusBtn.classList.add("offline");
+        statusText.textContent = "🔴 Offline";
+      } else {
+        statusBtn.classList.remove("offline");
+        statusBtn.classList.add("online");
+        statusText.textContent = "🟢 Online";
+      }
+    });
+  </script>
+</body>
+</html>

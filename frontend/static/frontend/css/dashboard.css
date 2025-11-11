@@ -1,0 +1,285 @@
+/* ==== Rider Dashboard Styles ==== */
+
+body {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background: linear-gradient(90deg, #000, #111);
+  color: white;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.dashboard-header p {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* Booking Section */
+.booking-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+}
+
+.booking-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 350px;
+}
+
+.booking-card h2 {
+  color: #000;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.booking-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-card label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.booking-card input,
+.booking-card select {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.booking-card input:focus,
+.booking-card select:focus {
+  border-color: #00bfff;
+}
+
+/* Button */
+.booking-card button {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Ride Info Card */
+.ride-info {
+  background: #000;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.1);
+}
+
+.ride-info h2 {
+  text-align: center;
+  color: #00bfff;
+  margin-bottom: 1rem;
+}
+
+.ride-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ride-card p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* ==== DRIVER DASHBOARD (Aligned with Home Theme) ==== */
+
+body {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Header */
+.driver-header {
+  background: linear-gradient(135deg, #000, #111);
+  color: #fff;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #00bfff;
+  text-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+  margin-bottom: 1rem;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* Dashboard Section */
+.driver-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+}
+
+/* Rides Container */
+.rides-container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 450px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.rides-container h2 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ride-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ride-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.ride-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.2);
+}
+
+.ride-card p {
+  margin: 0.2rem 0;
+  color: #444;
+}
+
+/* Stats Card */
+.stats-card {
+  background: #000;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 350px;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.15);
+}
+
+.stats-card h2 {
+  text-align: center;
+  color: #00bfff;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stats div h3 {
+  font-size: 1.6rem;
+  color: #00bfff;
+}
+
+.stats div p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* Button consistency with home theme */
+.btn.gradient,
+.btn.outline {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn.gradient {
+  background: linear-gradient(90deg, #00bfff, #0077ff);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+.btn.gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 191, 255, 0.6);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #00bfff;
+  color: #00bfff;
+}
+
+.btn.outline:hover {
+  background: #00bfff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .driver-dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .rides-container, .stats-card {
+    width: 90%;
+  }
+  .header-content h1 {
+    font-size: 2.2rem;
+  }
+}
